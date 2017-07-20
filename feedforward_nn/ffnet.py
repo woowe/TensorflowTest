@@ -75,4 +75,4 @@ class FFNet:
                 correct = tf.equal(tf.argmax(self.logits, 1), tf.argmax(self.y, 1))
                 accuracy = tf.reduce_mean(tf.cast(correct, 'float'))
                 print('Accuracy', accuracy.eval({self.x:training_data.test.images,
-                                             self.y:training_data.test.labels}))
+                                                 self.y:training_data.test.labels}))

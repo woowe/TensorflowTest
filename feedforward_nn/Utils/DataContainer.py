@@ -16,14 +16,14 @@ class DataContainer:
 
     def create_cross_validation_batches(self, k = 1):
         self.cross_validation_batches = []
-        self.current_cv_batch_n = 0
+        self.current_cv_batch_n = 1
 
         batch_size = int(len(self.inputs) / k)
 
         batches = []
 
-        for _ in range(k):
-            start   = k * batch_size
+        for i in range(k):
+            start   = i * batch_size
             end     = start + batch_size
 
             batches.append({
